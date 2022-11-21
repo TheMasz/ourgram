@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Arial';
+}
+body {
+  background-color: #f4f4f4;
+}
+nav,
+ul {
+  list-style-type: none;
+}
+nav > li > a,
+ul > li > a {
+  color: inherit;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+.f-12{
+  font-size: 12px;
+}
+.black{
+  color: #262626;
+}
+.gray{
+  color: #555;
+}
+.lightgray{
+  color: #b1b1b1;
+}
+.blue{
+  color: #157ba4;
+}
+.blue-sub{
+  color: #0085FF;
+}
+.avatar-md {
+  display: inline-block;
+  flex: 0 0 32px;
+  max-width: 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-image: url("https://cdn1.vectorstock.com/i/1000x1000/08/75/cute-yorkshire-terrier-dog-avatar-vector-20670875.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 7px 0 lightgray;
+}
+.avatar-lg {
+  position: relative;
+  display: inline-block;
+  flex: 0 0 64px;
+  max-width: 64px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-image: url("https://cdn1.vectorstock.com/i/1000x1000/08/75/cute-yorkshire-terrier-dog-avatar-vector-20670875.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 7px 0 lightgray;
+  
+}
+.avatar-lg > p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.b {
+  font-weight: bold;
+}
+.px-05{
+  padding: 0 5px;
+}
+.px-1{
+  padding: 0 10px;
+}
+.py-2{
+  padding: 20px 0;
+}
+.py-1{
+  padding: 10px 0;
+}
+.mx-2{
+  margin: 20px 0;
+}
+.mr-05 {
+  margin-right: 5px;
+}
+.mb-1{
+  margin-bottom: 10px;
+}
+.mb-2{
+  margin-bottom: 20px;
+}
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.space_between{
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.message{
+  padding: 20px 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+.error{
+  color: red;
+  background-color: #F8D7DA;
+}
+.warning{
+  color: #FFC90E;
+  background-color: #FFF3CD;
+}
+.container {
+  margin: 0 auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
