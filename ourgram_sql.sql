@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 02, 2023 at 02:36 PM
+-- Generation Time: Mar 08, 2023 at 04:59 AM
 -- Server version: 8.0.17
 -- PHP Version: 7.3.10
 
@@ -27,7 +27,8 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `comments`
 --
-
+CREATE DATABASE ourgram;
+USE ourgram;
 CREATE TABLE `comments` (
   `comment_id` int(11) NOT NULL,
   `comment` varchar(100) NOT NULL,
@@ -74,7 +75,9 @@ INSERT INTO `followers` (`follow_id`, `following_user_id`, `followed_user_id`) V
 (13, 4, 10),
 (14, 6, 10),
 (15, 8, 10),
-(16, 10, 8);
+(16, 10, 8),
+(17, 4, 12),
+(18, 7, 12);
 
 -- --------------------------------------------------------
 
@@ -93,13 +96,13 @@ CREATE TABLE `likes` (
 --
 
 INSERT INTO `likes` (`like_id`, `user_id`, `post_id`) VALUES
-(1, 1, 1),
 (2, 2, 3),
 (3, 2, 2),
 (4, 3, 4),
 (5, 10, 5),
 (6, 8, 5),
-(7, 7, 6);
+(7, 7, 6),
+(8, 12, 7);
 
 -- --------------------------------------------------------
 
@@ -133,7 +136,9 @@ INSERT INTO `notifications` (`notification_id`, `read_notification`, `message_no
 (13, 'no', 'pawitworshipper following you', 4),
 (14, 'no', 'pawitworshipper following you', 6),
 (15, 'no', 'pawitworshipper following you', 8),
-(16, 'no', 'pawittrainer following you', 10);
+(16, 'no', 'pawittrainer following you', 10),
+(17, 'no', 'masz following you', 4),
+(18, 'no', 'masz following you', 7);
 
 -- --------------------------------------------------------
 
@@ -153,12 +158,14 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`post_id`, `caption`, `create_at`, `user_id`) VALUES
-(1, 'Hello World!', '2023-03-02 13:53:28', 1),
-(2, 'Glow up!', '2023-03-02 13:54:18', 2),
+(2, 'TEST', '2023-03-02 13:54:18', 2),
 (3, 'Hope!', '2023-03-02 13:54:49', 2),
 (4, 'Bad luck.', '2023-03-02 13:59:31', 3),
 (5, 'Some day.', '2023-03-02 14:00:13', 10),
-(6, 'Can you see?', '2023-03-02 14:19:46', 7);
+(6, 'Can you see?', '2023-03-02 14:19:46', 7),
+(7, 'Hey yo', '2023-03-07 13:44:12', 12),
+(8, 'I\'m tried!', '2023-03-07 13:45:01', 12),
+(10, 'test', '2023-03-08 02:09:40', 12);
 
 -- --------------------------------------------------------
 
@@ -177,12 +184,14 @@ CREATE TABLE `posts_media` (
 --
 
 INSERT INTO `posts_media` (`post_media_id`, `media_files`, `post_id`) VALUES
-(1, '[\"2023-03-02_1677765205589.png\"]', 1),
 (2, '[\"2023-03-02_1677765249468.png\"]', 2),
 (3, '[\"2023-03-02_1677765279103.jpg\"]', 3),
 (4, '[\"2023-03-02_1677765568804.png\"]', 4),
 (5, '[\"2023-03-02_1677765605404.png\"]', 5),
-(6, '[\"2023-03-02_1677766776226.png\"]', 6);
+(6, '[\"2023-03-02_1677766776226.png\"]', 6),
+(7, '[\"2023-03-07_1678196648887.png\"]', 7),
+(8, '[\"2023-03-07_1678196696528.png\"]', 8),
+(10, '[\"2023-03-08_1678241378411.png\"]', 10);
 
 -- --------------------------------------------------------
 
@@ -217,7 +226,8 @@ INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `profile_name`,
 (8, 'pawittrainer', 'pawittrainer@example.com', '$2y$10$qYaZI5eOTcq5lUaR.h19pecrKAm9r7aWm/DWbCuFZ8qnKkRLQ4Up.', 'pawittrainer', '8.jpg', NULL, 'user', '2023-02-01 20:24:00'),
 (9, 'pawitcavities', 'pawitcavities@example.com', '$2y$10$E0AVc7DJQG64BlWNB2dQOeAznlrCLIBYpnH.AUuTPr0paK4xpLhVS', 'pawitcavities', '9.jpg', NULL, 'user', '2023-02-01 20:24:20'),
 (10, 'pawitworshipper', 'pawitworshipper@example.com', '$2y$10$NdVVgKzQf5HOaC4qYrYUF.gp7c9xyxBHJPsp8oiDaOsWegXimyg8G', 'pawitworshipper', '10.jpg', NULL, 'user', '2023-02-01 20:24:42'),
-(11, 'admin', 'admin@example.com', '$2y$10$2EzHQWNAB7SuiaeyYTgDZ.u/KYeciEoj.zyB9mBtze5.OpciiEijO', 'admin', NULL, NULL, 'admin', '2023-02-22 08:25:14');
+(11, 'admin', 'admin@example.com', '$2y$10$2EzHQWNAB7SuiaeyYTgDZ.u/KYeciEoj.zyB9mBtze5.OpciiEijO', 'admin', NULL, NULL, 'admin', '2023-02-22 08:25:14'),
+(12, 'masz', 'masz@example.com', '$2y$10$KwbVfxYMfNLFmu7fDqAcUe05ZQC/42ZUQK7tHFnGFPie21XAyjd6u', 'masz', NULL, NULL, 'user', '2023-03-07 13:43:03');
 
 --
 -- Indexes for dumped tables
@@ -284,25 +294,25 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT for table `followers`
 --
 ALTER TABLE `followers`
-  MODIFY `follow_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `follow_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `likes`
 --
 ALTER TABLE `likes`
-  MODIFY `like_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `like_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `notification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `notification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `posts_media`
@@ -314,7 +324,7 @@ ALTER TABLE `posts_media`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables

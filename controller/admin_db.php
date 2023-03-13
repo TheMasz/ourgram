@@ -59,6 +59,7 @@ if (isset($_POST['action'])) {
 
         //ลบไฟล์โพสต์ 
 
+
         header("location:  /admin/posts");
         exit;
     } else if ($_POST['action'] == 'fetch_post') {
@@ -148,7 +149,7 @@ if (isset($_POST['action'])) {
 } else if (isset($_POST['edit_post'])) {
     $post_id = $_POST['post_id'];
     $caption = $_POST['caption'];
-    
+
     $query = "UPDATE posts SET caption = '$caption' WHERE post_id = $post_id";
     $stmt = $conn->prepare($query);
     $stmt->execute();

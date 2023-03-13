@@ -11,7 +11,7 @@
             <div class="row">
                 <p>แคปชั่น</p>
                 <div class="textbox">
-                    <input type="text" name="caption" id="caption" placeholder="caption"  require>
+                    <input type="text" name="caption" id="caption" placeholder="caption"  required>
                 </div>
             </div>
             <div class="row image_input_wrap">

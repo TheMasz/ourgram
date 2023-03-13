@@ -1,5 +1,5 @@
-const itemsPerPage = 10; // Number of items to display per page
-const currentPage = 1; // Current page number
+let itemsPerPage = 7; // Number of items to display per page
+let currentPage = 1; // Current page number
 
 const pagination_post = document.querySelector(".pagination_post");
 const table_posts = document.querySelector("#table_posts");
@@ -176,7 +176,7 @@ function displayList(items, wrapper, itemsPerPage, page) {
 
 function setupPagination(items, wrapper, itemsPerPage) {
   const pageCount = Math.ceil(items.length / itemsPerPage);
-  for (const i = 1; i <= pageCount; i++) {
+  for (let i = 1; i <= pageCount; i++) {
     const btn = paginationButton(i, items);
     wrapper.appendChild(btn);
   }
