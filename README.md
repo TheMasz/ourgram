@@ -15,7 +15,7 @@ This project is a simple web application developed to mimic some basic functiona
 ` composer require altorouter/altorouter `
 
 **Starting the Project**
--To start the project, run the following command in the root directory:<br>
+- To start the project, run the following command in the root directory:<br>
 `php -S localhost:8080`
 
 **MySQL Configuration**<br>
