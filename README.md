@@ -19,9 +19,9 @@ This project is a simple web application developed to mimic some basic functiona
 `php -S localhost:8080`
 
 **MySQL Configuration**<br>
-`$servername = "localhost";<br>
-$username = "root";<br>
-$password = "12345678";<br>
-`
+`$servername = "localhost";`<br>
+`$username = "root";`<br>
+`$password = "12345678";`<br>
+
 
 
