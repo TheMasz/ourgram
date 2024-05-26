@@ -7,21 +7,21 @@ This project is a simple web application developed to mimic some basic functiona
 - Viewing Posts: Users can view their own posts and posts from other users.
 - Follow System: Users can follow and unfollow other users to see their posts in the feed.
 - Likes and Comments: Users can like and comment on posts.
-- Real-Time Notifications: Users receive notifications for likes, comments, and follows.<br>
+- Real-Time Notifications: Users receive notifications for likes, comments, and follows.
 
 **Installation**
 - Install Composer: Download and install Composer by following the instructions at Composer's official website.
-- Install AltoRouter: Run the following command in the root directory of your project to install AltoRouter:
-` composer require altorouter/altorouter `<br>
+- Install AltoRouter: Run the following command in the root directory of your project to install AltoRouter:<br>
+` composer require altorouter/altorouter `
 
 **Starting the Project**
 -To start the project, run the following command in the root directory:<br>
-`php -S localhost:8080`<br>
+`php -S localhost:8080`
 
 **MySQL Configuration**<br>
-`$servername = "localhost";
-$username = "root";
-$password = "12345678";
+`$servername = "localhost";<br>
+$username = "root";<br>
+$password = "12345678";<br>
 `
 
 
